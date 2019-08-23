@@ -19,7 +19,6 @@ RUN apt-get update && apt-get -y upgrade && apt-get -y install \
     docker-php-ext-enable mcrypt apcu && \ 
     rm -rf /var/lib/apt/lists/*
 
-VOLUME ${DOCUMENTROOT}/activate/api/db
 RUN chmod 777 -R ${DOCUMENTROOT}
 COPY run.sh /run.sh
 RUN chmod +x /run.sh
